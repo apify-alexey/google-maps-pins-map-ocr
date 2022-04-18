@@ -1,0 +1,14 @@
+{
+  "title": "OCR for pins at google maps",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "base64Image": {
+      "title": "Base64 image data",
+      "type": "string",
+      "description": "data:image/png;base64 content, google to see online encoders available",
+      "editor": "textarea"
+    }
+  },
+  "required": ["base64Image"]
+}
