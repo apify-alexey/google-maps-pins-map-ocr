@@ -8,6 +8,12 @@
       "type": "string",
       "description": "data:image/png;base64 content, google to see online encoders available",
       "editor": "textarea"
+    },
+    "saveImage": {
+      "title": "Save image",
+      "type": "boolean",
+      "description": "Save images from input to KV store as image file",
+      "default": true
     }
   },
   "required": ["base64Image"]

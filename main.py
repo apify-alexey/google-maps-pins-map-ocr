@@ -21,6 +21,9 @@ if __name__ == '__main__':
 
     base64_decoded = base64.b64decode(actor_input['base64Image'].replace('data:image/png;base64,', '', 1))
 
+    if (actor_input['saveImage'] != False):
+        default_kv_store_client.set_record('inputImage.png', base64_decoded, 'image/png')
+
     # TODO actor not supposed to be run from Apify Cloud UI, however if needed shortcut to local file
     # might be quick changed to create file from external source like file URL or Apify file uploader
     with open("out.png", "wb") as out_file:
